@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="dashboard">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div>
+
+            <h1>🛡 Smart Phishing Detection</h1>
+            <p>Welcome, {{ user }} 👋</p>
+
+        </div>
+
+        <a href="/logout" class="logout">Logout</a>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h2>{{ total }}</h2>
+            <p>Total Scans</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>{{ email }}</h2>
+            <p>Email</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>{{ url }}</h2>
+            <p>URL</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>{{ sms }}</h2>
+            <p>SMS</p>
+        </div>
+
+    </div>
+
+    <!-- Scanner Cards -->
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">📧</div>
+            <h2>Email Scanner</h2>
+            <p>Detect phishing emails using AI.</p>
+            <a href="/email">Open</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h2>URL Scanner</h2>
+            <p>Check whether a website is safe.</p>
+            <a href="/url">Open</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h2>SMS Scanner</h2>
+            <p>Detect spam and phishing SMS.</p>
+            <a href="/sms">Open</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📜</div>
+            <h2>Scan History</h2>
+            <p>View all previous detections.</p>
+            <a href="/history">Open</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+
+dataset/
+
+database/*.db
+
+utils/__pycache__/
+
+.DS_Store

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMS Scanner</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/scanner.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📱 AI SMS Scanner</h1>
+
+    <p>Analyze SMS messages using Artificial Intelligence.</p>
+
+    <form method="POST">
+
+        <textarea
+        name="message"
+        placeholder="Paste your SMS message here..."
+        required></textarea>
+
+        <button type="submit">
+
+            Analyze SMS
+
+        </button>
+
+    </form>
+
+    {% if prediction %}
+
+    <div class="result">
+
+        {{ prediction }}
+
+    </div>
+
+    {% endif %}
+
+    <a href="/dashboard" class="back">
+
+        ⬅ Back to Dashboard
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

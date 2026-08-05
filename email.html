@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Email Scanner</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/scanner.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📧 AI Email Scanner</h1>
+
+<p>Analyze emails for phishing attacks.</p>
+
+<form method="POST">
+
+<textarea
+name="email_text"
+placeholder="Paste Email Here..."
+required></textarea>
+
+<button>
+
+Analyze Email
+
+</button>
+
+</form>
+
+{% if prediction %}
+
+<div class="result">
+
+{{ prediction }}
+
+</div>
+
+{% endif %}
+
+<a href="/dashboard" class="back">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Smart Phishing Detection</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/login.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="login-box">
+
+    <div class="logo">
+
+        🛡
+
+    </div>
+
+    <h1>Smart Phishing Detection</h1>
+
+    <p>AI Powered Cyber Security Platform</p>
+
+    <form method="POST">
+
+        <input
+        type="email"
+        name="email"
+        placeholder="📧 Email Address"
+        required>
+
+        <input
+        type="password"
+        name="password"
+        placeholder="🔒 Password"
+        required>
+
+        <button type="submit">
+
+            Login
+
+        </button>
+
+    </form>
+
+    <div class="register">
+
+        Don't have an account?
+
+        <a href="/register">
+
+            Register
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
