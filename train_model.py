@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import pandas as pd
 import joblib
 import os
@@ -54,7 +54,7 @@ print("SMS Accuracy:", accuracy_score(y_test, pred))
 joblib.dump(model, "model/sms_model.pkl")
 joblib.dump(vectorizer, "model/sms_vectorizer.pkl")
 
-=======
+
 import pandas as pd
 import joblib
 import os
@@ -109,6 +109,4 @@ print("SMS Accuracy:", accuracy_score(y_test, pred))
 # Save Model
 joblib.dump(model, "model/sms_model.pkl")
 joblib.dump(vectorizer, "model/sms_vectorizer.pkl")
-
->>>>>>> 361e9d05fd57d5695edfe315ed97572f2ad94176
 print("SMS Model Saved Successfully!")
